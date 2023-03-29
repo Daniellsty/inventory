@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory</title>
+  <link rel="stylesheet" href="/public/tailwind/tailwind.css">
+</head>
+<body class="bg-slate-800">
+  <div class="main-container w-screen h-screen ">
+    <div class="nav bg-slate-600 w-screen h-16 flex items-center justify-center">
+      <h1 class="text-2xl text-white">Inventory App using tailwind &amp; Js</h1>
+      <span class="text-white text-lg border-2 w-10 h-10 rounded-full flex items-center justify-center mx-5 font-bold">7</span>
+    </div>
+
+    <div class="mx-auto max-w-[50%] mt-10">
+      <h1 class="text-slate-400 mx-auto text-lg">Add New category</h1>
+      <div class="category w-full mx-auto min-h-sm flex flex-col items-start pl-5 mt-2 bg-slate-600 rounded-lg">
+        <div class="title text-white flex flex-col mt-5">
+          <label for="title " class="text-slate-400">Category title</label>
+          <input class="border rounded-lg bg-transparent pl-2 mt-2 w-3/4 py-2" type="text" id="category-title" placeholder="title...">
+        </div>
+        <div class="desc text-white flex flex-col text-slate-400 mt-5 w-full">
+          <label for="description" class="capitalize text-slate-400">category description</label>
+          <textarea class="border border-slate-400 rounded-lg bg-transparent mr-10 mt-2" name="" id="category-desc" cols="45" rows="3"></textarea>
+        </div>
+        <div class="buttons mt-5 mb-5 w-full flex gap-4 pr-4">
+          <button class="capitalize w-1/2 border py-2 rounded-lg text-slate-400 border-slate-400">
+            cancel
+          </button>
+          <button id="add-category-btn" class="capitalize w-1/2 border py-2 bg-slate-200 rounded-lg font-bold">
+            add new category
+          </button>
+        </div>
+      </div>
+      <h1 class="text-slate-400 mx-auto text-lg capitalize my-2">
+        add new Product  ?
+      </h1>
+      <div class="product w-full flex flex-col items-start bg-slate-600 rounded-lg pl-5">
+        <div class="product-title flex flex-col my-2 text-slate-400">
+          <label for=" my-2 text-slate-400 ">product title</label>
+          <input id="product-title" type="text" class="border rounded-lg bg-transparent pl-2 w-3/4 py-2">
+        </div>
+
+        <div class="quantity flex flex-col">
+          <label for="quantity" class="text-slate-400">quantity</label>
+          <input id="product-quantity" type="text" class="border rounded-lg bg-transparent pl-2 w-3/4 py-2">
+        </div>
+
+        <div class="category flex flex-col mt-2 w-full">
+          <label for="" class="text-slate-400">category</label>
+          <select name="" id="category-select" class="border rounded-lg bg-transparent mr-4 text-slate-400 py-2">
+
+            
+          </select>
+          <button id="add-product-btn" class="capitalize border py-2 bg-slate-400 rounded-lg font-bold mt-5 my-4 text-slate-200 ">
+            add new product
+          </button>
+        </div>
+      </div>
+      <div class="sort-products ">
+        <h1 class="capitalize text-white text-2xl my-5">product list</h1>
+
+        <div class="details">
+          <div class="search flex justify-between items-center">
+            <h1 class="text-slate-400">search</h1>
+            <input type="text" class="search-product  border rounded-lg bg-transparent py-2">
+          </div>
+          <div class="sort flex justify-between items-center mt-5">
+            <h1 class="text-slate-400">sort</h1>
+            <select name="" id="sort-product" class="border rounded-lg bg-transparent text-slate-400 py-2">
+              <option value="">select ...</option>
+              <option selected="" value="newest">newest</option>
+              <option value="oldest">oldest</option>
+            </select>
+          </div>
+         <div class="product-list-container">
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/src/js/app.js" type="module"></script>
+
+</body></html>
