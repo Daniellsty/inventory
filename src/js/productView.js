@@ -59,20 +59,20 @@ class productPreviw{
            
             result += `<div class="flex justify-between my-5" id="products-list">
             <div class="right">
-            <h1 class="text-slate-400">${item.title}</h1>
+            <h1 class="text-slate-400 mx-5">${item.title}</h1>
             </div>
             <div class="left flex items-center text-slate-400 mb-5">
             <div class="date">
             <h1>${new Date().toLocaleDateString("fa-ir" , options)}</h1> 
             </div>
             <div class="title mx-5">
-            <h1 class="border p-1 mx-2 rounded-full"> ${mainItems.title} </h1>
+            <h1 style=" padding:2px 10px" class="border p-1 mx-2 rounded-full"> ${mainItems.title} </h1>
             </div>
             <div class="number mx-5">
-            <h1 class="border p-1 px-2 mx-2 rounded-full mx-2">${item.quantity}</h1>
+            <h1 style=" padding:2px 15px" class=" border  p-2 mx-2 rounded-full mx-2">${item.quantity}</h1>
             </div>
-            <div class="delete  mx-5">
-            <button class="delete-btn border border-red-300 px-2  text-red-500 rounded-full" data-id= ${item.id}>delete</button>
+            <div class="delete  m-5">
+            <button  style="width:60px; padding:5px;" class="delete-btn  border border-red-300 w-[10px] h-4  text-red-500 rounded-full" data-id= ${item.id}>delete</button>
             </div>
             </div>
             </div> 
